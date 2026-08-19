@@ -1,0 +1,58 @@
+Как писать switch на C:
+
+Важно знать что switch в отличии от if/else не работает со строкам. Switch понятнее.
+
+1. Нам нужно создать переменную:
+	//создаем переменую с типом int:
+		
+	int inp;
+	// Мы создали переменную inp
+
+2. Switch:	
+
+	// Теперь пишем сам switch:
+		
+	switch (inp) {
+	
+	}
+	
+	//Мы написали switch и написали в
+	//скобках переменную inp.
+	
+	//Дальше нужно добавить case:
+	 
+	case 1:
+		printf("hello\n");
+		break;
+	
+	//И дальше также пишем команды.
+	
+	//Можно добавить default:
+	 
+	default:
+		printf("unknown command");
+		break;
+	//Это как else.
+	
+3. Полный код:
+	
+// Библиотеки
+#include <stdio.h>
+  
+//Точка входа
+int main () {
+    
+	int inp;
+	
+	scanf("%d", &inp);
+	
+	switch (inp) {
+		case 1:
+			printf("hello\n");
+			break;
+		default:
+			printf("unknown command");
+            break;
+	}
+	return 0;
+}	 
