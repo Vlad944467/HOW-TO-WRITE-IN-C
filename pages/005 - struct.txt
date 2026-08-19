@@ -1,0 +1,48 @@
+Как писать struct на c:
+	
+	//Я считаю что struct очень
+	//удобен для создания игры.
+	
+Пример struct:
+	
+	struct Player {
+
+	    char name[32];
+        int health;
+	    int y, x;
+	    int is_alive;
+	    
+	}
+	
+	//Здесь мы видим переменную name
+	//с типом char созданная для имени.
+	//Еще есть переменнык health, y, x,
+	//is_alive с типом int
+	
+Как писать:
+	
+	
+#include <stdio.h>
+
+struct Player {
+    char name[32];
+    int health;
+    int x, y;
+    int is_alive;
+};
+
+int main() {
+    struct Player p = {"Hero", 100, 10, 20, 1};
+    
+    printf("Name: %s\n", p.name);
+    printf("Health: %d\n", p.health);
+    printf("Position: (%d, %d)\n", p.x, p.y);
+    
+    return 0;
+}
+
+// Этот код выведет:
+	
+// Name: Hero
+// Health: 100
+// Position: (10, 20)
